@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "abdd6c48-2d95-40c6-8c7c-26a51d14dc34",
+		"name": "article",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得全部貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://intense-eyrie-58838.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"intense-eyrie-58838",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"小明\",\r\n    \"content\": \"新增貼文ˇˇ\",\r\n    \"image\": \"https://picsum.photos/id/1003/1181/1772\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://intense-eyrie-58838.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"intense-eyrie-58838",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除全部貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://intense-eyrie-58838.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"intense-eyrie-58838",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://intense-eyrie-58838.herokuapp.com/posts/:id",
+					"protocol": "https",
+					"host": [
+						"intense-eyrie-58838",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						":id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯單筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"重新發文\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://intense-eyrie-58838.herokuapp.com/posts/:id",
+					"protocol": "https",
+					"host": [
+						"intense-eyrie-58838",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
